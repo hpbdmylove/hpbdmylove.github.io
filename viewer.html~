@@ -1,0 +1,83 @@
+<html>
+<title>App</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+<link href="css/icon.css" rel="stylesheet">
+<body>
+<header class="blue-grey darken-2" id="header">Đã kết nối với 192.168.1.102</header>
+<center>
+    <div id="main">
+<a id="tb"><div class="waves-effect waves-light card blue-grey darken-1"><span><table><tr><td><i class="small material-icons">chat_bubble</i></td><td> Thông báo</td></tr></table></span></div></a>
+<a id="todo"><div class="waves-effect waves-light card blue-grey darken-1"><span><table><tr><td><i class="small material-icons">today</i></td><td> Nhắc nhở</td></tr></table></span></div></a>
+<a id="file"><div class="waves-effect waves-light card blue-grey darken-1"><span><table><tr><td><i class="small material-icons">swap_horiz</i></td><td> Chuyển tệp tin</td></tr></table></span></div></a>
+<a id="rmt"><div class="waves-effect waves-light card blue-grey darken-1"><span><table><tr><td><i class="small material-icons">settings_remote</i></td><td> Điều khiển thông minh</td></tr></table></div></a>
+<a id="cnh"><div class="waves-effect waves-light card blue-grey darken-1"><span><table><tr><td><i class="small material-icons">person_pin</i></td><td> Cá nhân hóa</td></tr></table></div></a>
+<a style="display:none" id="el"><div class="card blue-grey darken-1"><span>Đồng bộ tệp</span></div></a>
+    </div>
+    <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large red">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul>
+            <li onclick="out()" style="line-height:-9px;height:30px;"><a style="width:auto;border-radius:3px;padding:6px;" class="btn-floating red">  <i class="material-icons left">portable_wifi_off</i> Thoát kết nối </a></li>
+        </ul>
+    </div>
+<style>
+*{
+margin:0;
+padding:0;
+font-family:arial;
+font-weight:100;
+outline:none;
+}
+header{
+padding:6px;
+background:#728;
+color:#eee;
+}
+#bottombar{
+background:#52A552;
+position:fixed;
+bottom:0;
+width:100%;
+text-align:right;
+height:40px;
+}
+table{
+color:#eee;
+display:block;
+font-size:22px;
+margin-top:21px;
+top:50%;
+left:50%;
+margin-left:40px;
+}
+#main div{
+height:120px;
+width:80%;
+max-width:400px;
+padding:9px;
+border-radius:8px;
+cursor:pointer;
+margin:6px;
+}
+a{
+text-decoration: none !important;
+}
+</style>
+    <script src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+de='vietdework';
+document.getElementById('header').innerText="Đã kết nối đến "+localStorage.src;
+document.getElementById('tb').href='http://'+localStorage.src+'/'+de+'/sync';
+document.getElementById('todo').href='http://'+localStorage.src+'/'+de+'/sync/appbase/alertky/';
+document.getElementById('file').href='http://'+localStorage.src+'/'+de+'/sync/remote.html';
+document.getElementById('file').href='http://'+localStorage.src+'/'+de+'/sync/fileupload.php';
+document.getElementById('cnh').href='http://'+localStorage.src+'/'+de+'/sync/cnh.php';
+document.getElementById('el').href='http://'+localStorage.src+'/'+de+'/sync/file/';
+</script>
+</body>
+</html>
